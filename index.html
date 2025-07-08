@@ -18,8 +18,13 @@
   <header>
     
     <div class="logo">PORT<span>FOLIO</span> </div>
-    <nav>
-      <ul>
+    <div class="menu-toggle" id="menu-toggle">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+<nav id="navbar">
+  <ul>
         <li><a href="#home" class="active">HOME</a></li>
     <li><a href="#about">ABOUT ME</a></li>
     <li><a href="#skill">SKILLS</a></li>
@@ -27,7 +32,6 @@
       </ul>
     </nav>
     <a href="#" class="cta">LET'S TALK</a>
-    </section>
   </header>
 
   <section id="home" class="hero">
@@ -158,25 +162,25 @@ identity. Strong team player with excellent time management and communication sk
 <section id="projects" class="projects-section">
   <h2>MY PROJECTS</h2>
 
- 
   <div class="project-grid">
+    <!-- Card 1 -->
     <div class="project-card">
       <h4>GRAPHIC DESIGNS</h4>
-      <p>Complete visual identity package.</p>
+      <p>Visual identity designs like logos, posters, and social media creatives crafted using Canva, Figma and Photoshop.</p>
+
       <a href="https://drive.google.com/drive/folders/1ZMX8o-gQqoXHEpFfiCRRQBxSwbPaeGKM?usp=sharing" target="_blank">View on Drive</a>
     </div>
- 
 
-  <!-- Development Projects -->
-  
-  <div class="project-grid">
+    <!-- Card 2 -->
     <div class="project-card">
       <h4>WEB DEVELOPMENTS</h4>
-      <p>Responsive portfolio built with HTML/CSS/JS.</p>
+    <p>Responsive web apps developed using MERN stack and Python, featuring clean UI and efficient backend logic.</p>
+
       <a href="https://github.com/yourusername/portfolio" target="_blank">View on GitHub</a>
     </div>
   </div>
 </section>
+
 
 <footer class="footer">
   <div class="footer-content">
@@ -208,6 +212,16 @@ identity. Strong team player with excellent time management and communication sk
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 </script>
+
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const navbar = document.querySelector('nav ul');
+
+  toggle.addEventListener('click', () => {
+    navbar.classList.toggle('active');
+  });
+</script>
+
 
 </body>
 </html>

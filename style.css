@@ -23,7 +23,9 @@ header {
   align-items: center;
   padding: 25px 8%;
   background-color: #fff;
-    font-family: poppins, sans-serif;
+  font-family: poppins, sans-serif;
+  position: relative;
+  z-index: 10000;
    
 }
 
@@ -50,8 +52,8 @@ nav ul li a {
   color: #474747;
   font-weight: 500;
   padding: 10px 15px; /* ✅ Set it here */
-  border-radius: 20px; /* ✅ Set here */
-  transition: all 0.3s ease;
+  border-radius: 50px; /* ✅ Set here */
+  transition: all 0.2s ease;
   font-weight: bold;
 }
 
@@ -81,6 +83,7 @@ nav ul li a:hover {
   align-items: center;
   padding: 80px 8%;
   flex-wrap: wrap;
+  
 }
 
 .left {
@@ -89,6 +92,7 @@ nav ul li a:hover {
 min-width: 300px;
 margin-left: 200px;
  font-family: 'Orbitron', sans-serif;
+ 
  
 }
 
@@ -392,11 +396,11 @@ font-family: 'Times New Roman', Times, serif, sans-serif;
   border: 1px solid #f4c10f;
   border-radius: 12px;
   width: 500px;
-  height: 200px;
+  height: auto;
   padding: 25px;
   text-align: left;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 0 10px #f4c10f40;
+  box-shadow: 0 0 10px #9877001f;
   display: flex;
   flex-direction: column;
   justify-content: flex-start; /* important to keep title at the top */
@@ -423,7 +427,7 @@ font-family: 'Times New Roman', Times, serif, sans-serif;
   padding: 8px 14px;
   border-radius: 20px;
   font-weight: bold;
-  display: inline-block;
+  display: flex;
   transition: background 0.3s ease;
    width: fit-content;
 }
@@ -567,5 +571,89 @@ font-family: 'Times New Roman', Times, serif, sans-serif;
 
   .footer h2 {
     font-size: 22px;
+  }
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.menu-toggle span {
+  height: 3px;
+  width: 25px;
+  background: #111;
+  border-radius: 2px;
+}
+
+/* Responsive navbar */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    position: absolute;
+    top: 25px;
+    right: 20px;
+    z-index: 20000;
+  }
+
+  .menu-toggle span {
+    height: 3px;
+    width: 25px;
+    background: #111;
+    border-radius: 2px;
+  }
+
+  nav {
+    position: relative;
+    z-index: 10000;
+  }
+
+  nav ul {
+    flex-direction: column;
+    position: fixed; /* ✅ overlay the whole screen */
+    top: 70px;
+    right: -100%; /* hidden initially */
+    width: 34%; /* adjust to your preference */
+    height: calc(40vh - 25px); /* ✅ full height minus header */
+    background: #fff;
+    transition: right 0.3s ease;
+    padding: 30px 20px;
+    z-index: 10000;
+    border-radius: 10px;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+  }
+
+  nav ul.active {
+    right: 0;
+  }
+
+  nav ul li {
+    margin-bottom: 20px;
+  }
+
+  nav ul li a {
+    color: #111;
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  .cta {
+    display: none; /* Hide CTA button in mobile view */
+  }
+}
+
+
+@media (max-width: 768px) {
+  .skill-card:hover {
+    transform: none; /* disable scaling */
+  }
+
+  .skill-card:hover .card-inner {
+    transform: none; /* disable flipping */
   }
 }
