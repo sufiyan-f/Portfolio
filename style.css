@@ -618,8 +618,8 @@ font-family: 'Times New Roman', Times, serif, sans-serif;
     position: fixed; /* ✅ overlay the whole screen */
     top: 70px;
     right: -100%; /* hidden initially */
-    width: 40%; /* adjust to your preference */
-    height: calc(40vh - 25px); /* ✅ full height minus header */
+    width: 50%; /* adjust to your preference */
+    height: calc(100vh - 25px); /* ✅ full height minus header */
     background: #fff;
     transition: right 0.3s ease;
     padding: 30px 20px;
