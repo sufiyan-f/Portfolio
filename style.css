@@ -15,7 +15,7 @@ body {
 
   background: #fff;
   color: #111;
-  background-color: yellow;
+  
 
 }
 
@@ -620,7 +620,7 @@ font-family: 'Times New Roman', Times, serif, sans-serif;
     position: fixed; /* ✅ overlay the whole screen */
     top: 70px;
     right: -100%; /* hidden initially */
-    width: 70%; /* adjust to your preference */
+    width: 50%; /* adjust to your preference */
     height: calc(100vh - 25px); /* ✅ full height minus header */
     background: #fff;
     transition: right 0.3s ease;
